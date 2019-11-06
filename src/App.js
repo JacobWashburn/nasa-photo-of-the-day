@@ -3,6 +3,7 @@ import "./App.css";
 import axios from 'axios'
 import PictureCard from './components/MainBody/Card/PictureCard'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
     const [image, setImage] = useState([])
@@ -21,8 +22,9 @@ function App() {
 
     return (
         <div className="App">
-            <Header/>
+            <Header date={date}/>
             <PictureCard data={image}/>
+            <Footer/>
         </div>
     );
 }
