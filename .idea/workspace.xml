@@ -208,7 +208,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573072038826</updated>
-      <workItem from="1573072041266" duration="10219000" />
+      <workItem from="1573072041266" duration="10472000" />
     </task>
     <task id="LOCAL-00001" summary="created header with a date and navbar">
       <created>1573082427175</created>
@@ -224,11 +224,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573082485142</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="forward and back buttons">
+      <created>1573083891536</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573083891536</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10219000" />
+    <option name="totallyTimeSpent" value="10472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1177" y="23" width="1383" height="1417" extended-state="0" />
@@ -263,7 +270,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created header with a date and navbar" />
     <MESSAGE value="created main portion of card started buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="created main portion of card started buttons" />
+    <MESSAGE value="forward and back buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="forward and back buttons" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">

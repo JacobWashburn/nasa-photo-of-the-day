@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function () {
+export default function (props) {
     return (
         <div>
-            <p>Picture Of The Day for: someday</p>
+            <p>Picture Of The Day for: {props.date}</p>
         </div>
     )
 }
