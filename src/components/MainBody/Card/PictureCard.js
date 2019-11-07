@@ -1,7 +1,7 @@
 import React from "react";
 import Picture from './Picture'
-import ForwardButton from './ForwardButton'
-import BackButton from './BackButton'
+import ForwardButton from './Buttons/ForwardButton'
+import BackButton from './Buttons/BackButton'
 
 export default function PictureCard(props){
     return (

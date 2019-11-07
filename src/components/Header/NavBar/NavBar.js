@@ -15,8 +15,8 @@ export default function NavBar() {
 
     return (
         <div className='navBar'>
-            {navLinkProps.map(data => {
-               return <NavLink  data={data}/>
+            {navLinkProps.map((data,index) => {
+               return <NavLink key={index} data={data}/>
             })}
         </div>
     )

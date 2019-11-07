@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer'
 
 function App() {
     const [image, setImage] = useState([])
-    const [date, setDate] = useState('2016-07-14')
+    const [date, setDate] = useState('2019-07-14')
 
     useEffect(() => {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
