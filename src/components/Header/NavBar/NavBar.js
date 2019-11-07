@@ -11,7 +11,7 @@ export default function NavBar() {
             name: 'NASA',
             url: 'https://www.nasa.gov/'
         }
-        ]
+        ];
 
     return (
         <div className='navBar'>
