@@ -1,5 +1,12 @@
 import React from "react";
-import NavLink from './NavLink'
+import NavLinks from './NavLink'
+import styled from 'styled-components'
+
+const NavLinksWrapper = styled.div`
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+`
 
 export default function NavBar() {
     const navLinkProps = [
@@ -14,11 +21,11 @@ export default function NavBar() {
         ];
 
     return (
-        <div className='navBar'>
+        <NavLinksWrapper >
             {navLinkProps.map((data,index) => {
-               return <NavLink key={index} data={data}/>
+               return <NavLinks key={index} data={data}/>
             })}
-        </div>
+        </NavLinksWrapper>
     )
 
 }

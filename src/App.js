@@ -7,22 +7,28 @@ import Footer from './components/Footer/Footer'
 
 
 function App() {
+    let getToday = new Date();
+    let getDay = String(getToday.getDate()).padStart(2, '0');
+    const [day, setDay] = useState(getDay);
+    let month = String(getToday.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let year = getToday.getFullYear();
+
+    const today = year + '-' + month + '-' + day
+    const [dayChange, setDayChange] = useState(year + '-' + month + '-' + day)
+
     const [image, setImage] = useState([]);
-    const [date, setDate] = useState('');
+    const [date, setDate] = useState(today);
+
+    useEffect(()=>{
+        setDayChange(year + '-' + month + '-' + day)
+        setDate(dayChange)
+    },[day])
 
     useEffect(() => {
-        let today = new Date();
-        let day = String(today.getDate()).padStart(2, '0');
-        let month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        let year = today.getFullYear();
-        today = year + '-' + month + '-' + day;
-        setDate(today)
-    }, []);
-
-    useEffect(() => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=IhKxDSJTAJjc89d4fOXzVpvFX7iR1E1KerB5l101&date=${date}`)
             .then(response => {
                 setImage(response.data)
+                console.log('axios call', response)
             })
             .catch(error => {
                 console.log(error.message)
@@ -31,8 +37,8 @@ function App() {
 
     return (
         <div className="App">
-            <Header date={date} setDate={setDate} />
-            <PictureCard data={image}/>
+            <Header date={date} set={setDate} />
+            <PictureCard data={image} day={day} set={setDay} date={date} today={today}/>
             <Footer/>
         </div>
     );

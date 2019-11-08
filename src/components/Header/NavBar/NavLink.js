@@ -1,7 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
 
-export default function NavLink(props) {
+const NavLink = styled.a`
+  text-decoration: none;
+  color: black;
+`
+
+export default function NavLinkCreator(props) {
     return (
-        <a href={props.data.url}>{props.data.name}</a>
+        <NavLink href={props.data.url}>{props.data.name}</NavLink>
             )
             }
